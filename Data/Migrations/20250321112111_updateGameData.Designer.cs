@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using myGames.api.Data;
 
@@ -10,9 +11,11 @@ using myGames.api.Data;
 namespace myGames.api.Data.Migrations
 {
     [DbContext(typeof(GameStoreContext))]
-    partial class GameStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20250321112111_updateGameData")]
+    partial class updateGameData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");
@@ -118,11 +121,6 @@ namespace myGames.api.Data.Migrations
                         {
                             Id = 12,
                             Name = "FPS"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Name = "Psychological Horror"
                         });
                 });
 

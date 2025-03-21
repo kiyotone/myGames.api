@@ -9,23 +9,23 @@ Content-Type: application/json
 
 {
     "name": "GTA V",
-    "genre": "Action",
+    "genreId": 3,
     "platform": "PS4",
     "releaseDate": "2013-09-17"
 
 }
 
 ###
-PUT  http://localhost:5066/api/games/9
+PUT  http://localhost:5066/api/games/15
 Content-Type: application/json
 
 {
     "name": "Cyberpuasdnk 2077",
-    "genre": "RPG",
+    "genreId": 3,
     "platform": "PC",
     "releaseDate": "2020-12-10"
 
 }
 
 ###
-DELETE  http://localhost:5066/api/games/9
+DELETE  http://localhost:5066/api/games/15

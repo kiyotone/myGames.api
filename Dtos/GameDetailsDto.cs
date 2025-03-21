@@ -1,12 +1,12 @@
 namespace myGames.api.Dtos;
 
-public record class GameDtos(
+public record class GameDetailsDto(
     
     int Id,
     
     string Name,
     
-    string Genre,
+    int GenreId,
 
     string Platform,
 
