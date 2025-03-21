@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Mh3Goo70ly92tSmDgG8Cm7el7iN+8yCTazuegkEW1sA=",
+  "Source": "myGames.api",
+  "BasePath": "_content/myGames.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
