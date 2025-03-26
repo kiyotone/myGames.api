@@ -1,7 +1,7 @@
 GET http://localhost:5066/api/games
 
 ###
-GET http://localhost:5066/api/games/9
+GET http://localhost:5066/api/games/1
 
 ###
 POST  http://localhost:5066/api/games
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "name": "GTA V",
-    "genreId": 3,
+    "genreIds": [3,2],
     "platform": "PS4",
     "releaseDate": "2013-09-17"
 

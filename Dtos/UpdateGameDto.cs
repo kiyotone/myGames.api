@@ -6,7 +6,7 @@ public record class UpdateGameDto(
     
     [Required] [StringLength(50)]  string Name,
     
-    int GenreId,
+    [Required] List<int> GenreIds,
 
     [Required] [StringLength(50)]  string Platform,
 

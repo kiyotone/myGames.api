@@ -23,8 +23,9 @@ namespace myGames.api.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("GenreId")
-                        .HasColumnType("INTEGER");
+                    b.PrimitiveCollection<string>("GenreIds")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -39,8 +40,6 @@ namespace myGames.api.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GenreId");
-
                     b.ToTable("Games");
                 });
 
@@ -50,11 +49,16 @@ namespace myGames.api.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("GameId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GameId");
 
                     b.ToTable("Genres");
 
@@ -126,15 +130,16 @@ namespace myGames.api.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("myGames.api.Entities.Genre", b =>
+                {
+                    b.HasOne("myGames.api.Entities.Game", null)
+                        .WithMany("Genres")
+                        .HasForeignKey("GameId");
+                });
+
             modelBuilder.Entity("myGames.api.Entities.Game", b =>
                 {
-                    b.HasOne("myGames.api.Entities.Genre", "Genre")
-                        .WithMany()
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Genre");
+                    b.Navigation("Genres");
                 });
 #pragma warning restore 612, 618
         }

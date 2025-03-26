@@ -6,7 +6,7 @@ public record class GameSummaryDto(
     
     string Name,
     
-    string Genre,
+    List<string> Genres,
 
     string Platform,
 

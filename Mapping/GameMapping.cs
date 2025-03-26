@@ -8,7 +8,7 @@ public static class GameMapping
         return new Game
         {
             Name = dto.Name,
-            GenreId = dto.GenreId,
+            GenreIds = dto.GenreIds,
             Platform = dto.Platform,
             ReleaseDate = dto.ReleaseDate
         };
@@ -20,7 +20,7 @@ public static class GameMapping
         {
             Id = id,
             Name = dto.Name,
-            GenreId = dto.GenreId,
+            GenreIds = dto.GenreIds,
             Platform = dto.Platform,
             ReleaseDate = dto.ReleaseDate
         };
@@ -31,7 +31,7 @@ public static class GameMapping
         return new GameDetailsDto(
             entity.Id,
             entity.Name,
-            entity.GenreId,
+            entity.GenreIds,
             entity.Platform,
             entity.ReleaseDate
         );
@@ -42,7 +42,7 @@ public static class GameMapping
         return new GameSummaryDto(
             entity.Id,
             entity.Name,
-            entity.Genre!.Name,
+            entity.Genres.Select(genre => genre.Name).ToList(),
             entity.Platform,
             entity.ReleaseDate
         );

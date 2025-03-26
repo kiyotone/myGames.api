@@ -6,7 +6,7 @@ public record class GameDetailsDto(
     
     string Name,
     
-    int GenreId,
+    List<int> GenreIds,
 
     string Platform,
 
