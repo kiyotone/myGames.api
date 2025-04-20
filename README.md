@@ -6,7 +6,7 @@ A simple .NET API to store and display games you've played, each linked to a gen
 
 - Add and view your game collection.
 - Use genre IDs to classify games by type (e.g., RPG, Action, Strategy).
-- Fetch list of all games and genres.
+- Fetch list of all games.
 - Update or delete game entries.
 
 ## 🧩 Tech Stack
